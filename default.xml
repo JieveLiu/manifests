@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="http://git01.mediatek.com" name="git01"/>
+  <remote fetch="ssh://git@github.com" name="github"/>
+  <remote fetch="https://github.com" name="httpsgithub"/>
+  <remote fetch="git://git.openembedded.org" name="oe"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  
+  <default remote="git01" revision="refs/heads/audio-release-sdk.mt8516-mi" sync-j="8"/>
+  
+  <project name="MiEcosystem/VoiceSwitch" path="scripts" remote="github" revision="dd8548b1964d1cd467348e08aba30bbcf0fd83a8" upstream="build">
+    <copyfile dest="setupenv.sh" src="setupenv.sh"/>
+    <copyfile dest="generate_manifest.sh" src="generate_manifest.sh"/>
+    <copyfile dest="cleanall.sh" src="cleanall.sh"/>
+  </project></manifest>
